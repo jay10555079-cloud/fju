@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>聯絡我們｜Smart Café 無人咖啡廳</title>
+  <style>
+    /* 全域樣式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft JhengHei", sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1, h2 {
+      color: #222;
+    }
+
+    /* 導覽列 */
+    .navbar {
+      background-color: #fff;
+      border-bottom: 2px solid #ddd;
+      padding: 10px 20px;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar ul li a {
+      padding: 8px 12px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #ffb74d;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    /* 頁首 */
+    .page-header {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* 主要內容 */
+    .content {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* 卡片樣式 */
+    .contact-card {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-card h2 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #ff9800;
+    }
+
+    .contact-card p, .contact-card ul {
+      margin-bottom: 0;
+    }
+
+    .contact-card ul li {
+      margin-bottom: 5px;
+    }
+
+    /* 表單 */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #ffb74d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #ff9800;
+    }
+
+    /* 頁尾 */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* 響應式 */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .contact-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 導覽列 -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="concept.html">品牌理念</a></li>
+      <li><a href="menu.html">咖啡菜單</a></li>
+      <li><a href="technology.html">智慧設備</a></li>
+      <li><a href="process.html">無人流程</a></li>
+      <li><a href="locations.html">門市據點</a></li>
+      <li><a href="member.html">會員系統</a></li>
+      <li><a href="faq.html">常見問題</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <!-- 頁首 -->
+  <header class="page-header">
+    <h1>聯絡我們</h1>
+    <p>有任何問題或建議，歡迎透過以下方式聯繫我們</p>
+  </header>
+
+  <!-- 主要內容 -->
+  <main class="content">
+
+    <div class="contact-card">
+      <h2>客服信箱</h2>
+      <p>Email：support@smartcafe.com.tw</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>客服專線</h2>
+      <p>電話：02-1234-5678（週一至週五 09:00 - 18:00）</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>社群平台</h2>
+      <ul>
+        <li><a href="#">Facebook：Smart Café 官方粉絲專頁</a></li>
+        <li><a href="#">Instagram：@smartcafe.tw</a></li>
+        <li><a href="#">Line 官方帳號：@smartcafe</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-card">
+      <h2>聯絡表單（範例）</h2>
+      <form>
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" placeholder="請輸入姓名">
+
+        <label for="email">Email：</label>
+        <input type="email" id="email" name="email" placeholder="請輸入Email">
+
+        <label for="message">訊息內容：</label>
+        <textarea id="message" name="message" rows="5" placeholder="請輸入訊息"></textarea>
+
+        <button type="submit">送出</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <p>© 2025 Smart Café 無人咖啡廳｜All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!-- 音樂膠囊 -->
+<audio id="bg-music" src="op9.mp3" loop></audio>
+
+<button id="music-btn" class="music-btn">▶️ 音樂播放</button>
+
+<style>
+  /* 膠囊按鈕樣式 */
+  .music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff9800, #ffc107);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* 膠囊形狀 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .music-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+</style>
+
+<script>
+  const musicBtn = document.getElementById("music-btn");
+  const bgMusic = document.getElementById("bg-music");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicBtn.textContent = "▶️ 音樂播放";
+    } else {
+      bgMusic.play();
+      musicBtn.textContent = "⏸️ 暫停音樂";
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // 頁面載入後自動播放
+  window.addEventListener("load", () => {
+    bgMusic.play().then(() => {
+      isPlaying = true;
+      musicBtn.textContent = "⏸️ 暫停音樂";
+    }).catch(() => {
+      // 自動播放失敗，保持初始狀態
+      isPlaying = false;
+      musicBtn.textContent = "▶️ 音樂播放";
+    });
+  });
+</script>
+

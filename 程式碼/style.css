@@ -1,0 +1,152 @@
+/* 全域樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2 {
+  color: #222;
+}
+
+/* 導覽列 */
+.navbar {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul li a {
+  padding: 8px 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #ffb74d;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* 頁首 / Header */
+.hero, .page-header {
+  background-color: #ffe0b2;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p, .page-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* 主要內容 */
+.content {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.section p {
+  margin-bottom: 10px;
+}
+
+.section ul.menu-list li {
+  margin-bottom: 10px;
+}
+
+/* 表單樣式 */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #ffb74d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff9800;
+}
+
+/* 頁尾 */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section {
+    padding: 15px;
+  }
+}
