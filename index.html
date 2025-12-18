@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Café 無人咖啡廳</title>
+  <style>
+    /* 全域樣式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft JhengHei", sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1, h2 {
+      color: #222;
+    }
+
+    /* 導覽列 */
+    .navbar {
+      background-color: #fff;
+      border-bottom: 2px solid #ddd;
+      padding: 10px 20px;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar ul li a {
+      padding: 8px 12px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      background-color: #ffb74d;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    /* 頁首 / Hero */
+    .hero, .page-header {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p, .page-header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* 主要內容 */
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .section p {
+      margin-bottom: 10px;
+    }
+
+    /* 頁尾 */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* 響應式 */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 音樂膠囊 -->
+<audio id="bg-music" src="op9.mp3" loop></audio>
+
+<button id="music-btn" class="music-btn">▶️ 音樂播放</button>
+
+<style>
+  /* 膠囊按鈕樣式 */
+  .music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff9800, #ffc107);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* 膠囊形狀 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .music-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+</style>
+
+<script>
+  const musicBtn = document.getElementById("music-btn");
+  const bgMusic = document.getElementById("bg-music");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicBtn.textContent = "▶️ 音樂播放";
+    } else {
+      bgMusic.play();
+      musicBtn.textContent = "⏸️ 暫停音樂";
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // 頁面載入後自動播放
+  window.addEventListener("load", () => {
+    bgMusic.play().then(() => {
+      isPlaying = true;
+      musicBtn.textContent = "⏸️ 暫停音樂";
+    }).catch(() => {
+      // 自動播放失敗，保持初始狀態
+      isPlaying = false;
+      musicBtn.textContent = "▶️ 音樂播放";
+    });
+  });
+</script>
+
+
+
+  <!-- 導覽列 -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="concept.html">品牌理念</a></li>
+      <li><a href="menu.html">咖啡菜單</a></li>
+      <li><a href="technology.html">智慧設備</a></li>
+      <li><a href="process.html">無人流程</a></li>
+      <li><a href="locations.html">門市據點</a></li>
+      <li><a href="member.html">會員系統</a></li>
+      <li><a href="faq.html">常見問題</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <!-- 首頁內容 -->
+  <header class="hero">
+    <h1>歡迎來到 Smart Café</h1>
+    <p>全台首創智慧無人咖啡體驗，快速、便利又美味</p>
+  </header>
+
+  <main class="content">
+
+    <section class="section">
+      <h2>我們的理念</h2>
+      <p>
+        Smart Café 結合智慧設備與自助系統，打造 24 小時營運的無人咖啡空間，
+        讓每位顧客都能享受到高品質、穩定的咖啡體驗。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>快速點餐</h2>
+      <p>
+        透過智慧點餐系統，顧客可以輕鬆選擇喜愛飲品，
+        並快速完成付款及取餐，全程無需等待服務人員。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>全自動製作</h2>
+      <p>
+        高科技咖啡設備自動研磨、萃取與出杯，
+        確保每一杯咖啡都達到一致的口感與品質。
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Smart Café 無人咖啡廳｜All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
